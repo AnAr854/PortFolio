@@ -10,7 +10,19 @@ function updateLevelAndPoints(){
     document.getElementById("points").innerHTML = "Points " + points;
 }
 
+function startNewGame(event){
+   location.reload();
+}
+
 function gameOver(){
     clearInterval(moveOn);
     document.getElementById("gameOver").innerHTML = "GAME OVER!!";
+    drawBigWorm();
+    let newGameButton = document.createElement('button');
+    newGameButton.innerText = "Start new game";
+    newGameButton.id = "newGameButton";
+    newGameButton.addEventListener("click", function (event){
+        startNewGame();
+    });
+    document.getElementById("gameZone").appendChild(newGameButton);
 }
