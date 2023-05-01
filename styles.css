@@ -17,6 +17,7 @@ body{
 .gridContainer{
     display: grid;
     width: fit-content;
+    align-items:flex-start;
     height: 21em;
     grid-template-columns: repeat(21, 1em);
     grid-template-rows: repeat(21, 1em);
@@ -67,6 +68,14 @@ body{
     background: rgb(27,211,213);
     background: linear-gradient(0deg, rgba(27,211,213,1) 21%, rgba(253,187,45,1) 100%);
 }
+.turnTailPiece{
+    width: 0.8em;
+    height: 0.8em;
+    margin: 0.1em;
+    border-radius: 20% 100% 20% 30%;
+    background: rgb(27,211,213);
+    background: linear-gradient(45deg, rgba(27,211,213,1) 21%, rgba(253,187,45,1) 70%);
+}
 #wormFood{
     width: 0.6em;
     height: 0.6em;
@@ -77,4 +86,8 @@ body{
 #gameOver{
     color:red;
     font-size: 4em;
+}
+
+#newGameButton{
+    grid-area: 13 / 9 / 21 / 14;
 }
