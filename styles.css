@@ -69,12 +69,39 @@ body{
     background: linear-gradient(0deg, rgba(27,211,213,1) 21%, rgba(253,187,45,1) 100%);
 }
 .turnTailPiece{
+    position: relative;
+    display: inline-block;
     width: 0.8em;
     height: 0.8em;
-    margin: 0.1em;
     border-radius: 20% 100% 20% 30%;
     background: rgb(27,211,213);
     background: linear-gradient(45deg, rgba(27,211,213,1) 21%, rgba(253,187,45,1) 70%);
+}
+/*In outerCorner yellow runs on outerside of tailpiece*/
+.outerCorner{
+    transform: rotate(270deg) !important;
+    margin: 0.2em 0em 0em 0.3em;
+}
+.innerCorner{
+    transform: rotate(0deg) !important;
+    margin: 0.19em 0.06em 0em;
+    background: linear-gradient(45deg, rgba(253,187,45,1) 11%, rgba(27,211,213,1) 51%);
+}
+.rotate0{
+    transform: rotate(0deg) !important;
+    margin: 0.2em 0.06em;
+}
+.rotate90{
+    transform: rotate(90deg) !important; 
+    margin: 0em 0.1em;
+}
+.rotate180{
+    transform: rotate(180deg) !important;
+    margin: 0em 0.3em;
+}
+.rotate270{
+    transform: rotate(270deg) !important;
+    margin: 0.2em 0.3em;
 }
 #wormFood{
     width: 0.6em;
