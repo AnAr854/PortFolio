@@ -6,8 +6,9 @@ function movingUp(){
         if(document.getElementById("wormFood").style.gridArea === document.getElementById("wormHead").style.gridArea){
             eatFood();
         }
+        // Checking if eats own tail. Returns true if location is free
         if(checkWormsLocation(document.getElementById("wormHead").style.gridArea)){
-            rotateAndMoveTailPieces();
+            rotateAndMoveTailPieces(turnedTo);
         }else{
             clearInterval(moveOn);
             gameOver();
