@@ -1,5 +1,5 @@
 function setStartingPositions(){
-    document.getElementById("wormHead").style.gridArea = "11 / 11 / 21 / 21";
+    document.getElementById("wormHead").style.gridArea = headsGridAreas[0].place;
     newPlaceForFood();
     updateLevelAndPoints();
     trackHead();
@@ -16,6 +16,10 @@ function startNewGame(event){
 
 function gameOver(){
     clearInterval(moveOn);
+    let removes = document.querySelectorAll(".tailPiece, .turnTailPiece, #wormFood");
+        removes.forEach(element => {
+            element.remove();
+        });
     document.getElementById("gameOver").innerHTML = "GAME OVER!!";
     drawBigWorm();
     let newGameButton = document.createElement('button');
